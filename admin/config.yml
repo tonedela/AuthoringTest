@@ -1,1 +1,29 @@
 
+backend:
+  name: github
+  repo: https://github.com/tonedela/AuthoringTest.git
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "items"
+    label: "Items"
+    format: "json"
+    files:
+      - file: "data/items.json"
+        label: "Item List"
+        name: "items"
+        fields:
+          - label: "Items"
+            name: ""
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Price", name: "price", widget: "number"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: {label: "Tag", name: "tag", widget: "string"}
