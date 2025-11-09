@@ -4,7 +4,6 @@ backend:
   repo: tonedela/AuthoringTest
   Callback URL: https://tonedela.github.io/AuthoringTest/admin/
   branch: main
-  auth_type: implicit
 
 media_folder: "uploads"
 public_folder: "/uploads"
